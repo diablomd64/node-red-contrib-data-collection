@@ -8,7 +8,7 @@ You can install this node directly from the "Manage Palette" menu in the Node-RE
 
 Alternatively, run the following command in your Node-RED user directory - typically `~/.node-red` on Linux or `%HOMEPATH%\.nodered` on Windows
 
-        npm install node-red-contrib-tag-memory
+        npm install node-red-contrib-data-collection
 
 NodeJS version 10 or greater and Node-RED version 1.0 or greater is required.
 
