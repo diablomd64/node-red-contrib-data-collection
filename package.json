@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple node that collect payloads in memory, based on configured samples quantity",
   "main": "data-collection.js",
-  "repository": "git@github.com:diablomd64/node-red-contrib-data-collection.git"
+  "repository": "git@github.com:diablomd64/node-red-contrib-data-collection.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
