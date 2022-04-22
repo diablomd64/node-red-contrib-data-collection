@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('data-collection',{
+        category: 'buffer',
+        color: '#b39ddb',
+        defaults: {
+            name: {value:""},
+			samples: {value:5760, validate:RED.validators.number()},
+			outtopic: {value:""}
+			},
+        inputs:2,
+        outputs:1,
+        icon: "node_icon.png",
+        label: function() {
+            return this.name||"data-collection";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="data-collection">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+	</div>
+    <div class="form-row">
+        <label for="node-input-samples"><i class="fa fa-tag"></i> Samples Quantity</label>
+        <input type="text" id="node-input-samples" placeholder="Samples">
+	</div>
+    <div class="form-row">
+        <label for="node-input-outtopic"><i class="fa fa-tag"></i> Out Topic</label>
+        <input type="text" id="node-input-outtopic" placeholder="Out Topic">
+	</div>
+</script>
+
+<script type="text/html" data-help-name="data-collection">
+    <p>Mantiene in memoria un payload</p>
+</script>
