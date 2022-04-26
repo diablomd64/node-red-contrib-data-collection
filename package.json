@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-data-collection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple node that collect payloads in memory, based on configured samples quantity",
   "main": "data-collection.js",
   "repository": "git@github.com:diablomd64/node-red-contrib-data-collection.git",

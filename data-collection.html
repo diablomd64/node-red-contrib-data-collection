@@ -5,7 +5,10 @@
         defaults: {
             name: {value:""},
 			samples: {value:5760, validate:RED.validators.number()},
-			outtopic: {value:""}
+			outtopic: {value:""},
+			outoninput: {value: true},
+			outontopic: {value: false},
+			triggertopic: {value: ""}
 			},
         inputs:2,
         outputs:1,
@@ -24,6 +27,18 @@
     <div class="form-row">
         <label for="node-input-samples"><i class="fa fa-tag"></i> Samples Quantity</label>
         <input type="text" id="node-input-samples" placeholder="Samples">
+	</div>
+    <div class="form-row">
+        <label for="node-input-outoninput"><i class="fa fa-tag"></i> Send message on input received</label>
+        <input type="checkbox" id="node-input-outoninput" placeholder="Send message on input received">
+	</div>
+    <div class="form-row">
+        <label for="node-input-outontopic"><i class="fa fa-tag"></i> Send message on trigger topic received</label>
+        <input type="checkbox" id="node-input-outontopic" placeholder="Send message on trigger topic received">
+	</div>
+    <div class="form-row">
+        <label for="node-input-triggertopic"><i class="fa fa-tag"></i> Trigger Topic</label>
+        <input type="text" id="node-input-triggertopic" placeholder="Trigger Topic">
 	</div>
     <div class="form-row">
         <label for="node-input-outtopic"><i class="fa fa-tag"></i> Out Topic</label>

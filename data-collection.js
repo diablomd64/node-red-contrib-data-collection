@@ -15,10 +15,13 @@ module.exports = function(RED) {
 			safeSamples = config.samples;
 		
         node.on('input', function(msg) {
-			if(msg.topic === "trigger")
+			if(msg.topic !== "" && msg.topic === config.triggertopic)
 			{
-				var newMsg = { payload: mem_data, topic: config.outtopic };
-				node.send(newMsg);
+				if(config.outontopic)
+				{
+					var newMsg = { payload: mem_data, topic: config.outtopic };
+					node.send(newMsg);
+				}
 			}
 			else
 			{
@@ -55,9 +58,11 @@ module.exports = function(RED) {
 						mem_data = tmp_data;
 					}
 				}
-				
-				var newMsg = { payload: mem_data, topic: config.outtopic };
-				node.send(newMsg);
+				if(config.outoninput)
+				{
+					var newMsg = { payload: mem_data, topic: config.outtopic };
+					node.send(newMsg);
+				}
 				
 				//Save on temp file
 				fs.writeFile(fileName, JSON.stringify(mem_data), (err) => {
